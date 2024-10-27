@@ -14,19 +14,24 @@ function Layout() {
 
   return (
     <>
-      {location.pathname === "/" || location.pathname === "/login" ?  null : <Navbar />}
+      {location.pathname === "/" || location.pathname === "/login" ? null : (
+        <Navbar />
+      )}
       <Routes>
         <Route path="/" element={<Welcome />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/cuisines" element={<FoodCategory />} />
-        <Route path="/drinks" element={<FoodCategory />} />
-        <Route path="/snacks" element={<FoodCategory />} />
-        <Route path="/khaja-set" element={<FoodCategory />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/category/:category" element={<FoodCategory />} />
         <Route path="/login" element={<Login />} />
         <Route path="/table" element={<Table />} />
       </Routes>
-      {location.pathname === "/" || location.pathname === "/login" || location.pathname === "/table" ?  null : <Cart />}
-      {location.pathname === "/" || location.pathname === "/login" ?  null : <Footer />}
+      {location.pathname === "/" ||
+      location.pathname === "/login" ||
+      location.pathname === "/table" ? null : (
+        <Cart />
+      )}
+      {location.pathname === "/" || location.pathname === "/login" ? null : (
+        <Footer />
+      )}
     </>
   );
 }
