@@ -8,7 +8,12 @@ import Welcome from "./Pages/Welcome";
 import Navbar from "./Components/Navbar/index";
 import Footer from "./Components/Footer";
 import Cart from "./Components/Cart";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
+//adding google client ID here
+
+const clientId =
+  "244499214878-uois95inql99mbkj0vmp8p4pvj49lfp9.apps.googleusercontent.com";
 function Layout() {
   const location = useLocation();
 
@@ -38,9 +43,11 @@ function Layout() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <Layout />
-    </BrowserRouter>
+    <GoogleOAuthProvider clientId="{clientId}">
+      <BrowserRouter>
+        <Layout />
+      </BrowserRouter>
+    </GoogleOAuthProvider>
   );
 }
 
