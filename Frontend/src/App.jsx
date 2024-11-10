@@ -12,8 +12,6 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 
 //adding google client ID here
 
-const clientId =
-  "244499214878-uois95inql99mbkj0vmp8p4pvj49lfp9.apps.googleusercontent.com";
 function Layout() {
   const location = useLocation();
 
@@ -43,7 +41,7 @@ function Layout() {
 
 function App() {
   return (
-    <GoogleOAuthProvider clientId="{clientId}">
+    <GoogleOAuthProvider clientId="244499214878-ski0knaamlp5gra4dlivu1lr9c5k1b17.apps.googleusercontent.com">
       <BrowserRouter>
         <Layout />
       </BrowserRouter>
