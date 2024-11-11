@@ -1,0 +1,14 @@
+/* Add this to your global or specific stylesheet */
+.table-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  
+  .table-image {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+  }
+  
