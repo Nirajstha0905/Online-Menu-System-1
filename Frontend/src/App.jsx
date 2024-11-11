@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./Pages/Home";
 import FoodCategory from "./Pages/FoodCategory";
 import Login from "./Pages/Login";
-import Table from "./Pages/Table";
+import Table from "./Pages/Layout";
 import Welcome from "./Pages/Welcome";
 import Navbar from "./Components/Navbar/index";
 import Footer from "./Components/Footer";
