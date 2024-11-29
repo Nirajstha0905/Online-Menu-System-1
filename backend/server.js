@@ -33,7 +33,6 @@ const Item = mongoose.model('menuItem', itemSchema);
 app.get('/api/menu', async (req, res) => {
     try {
         const items = await Item.find(); // Fetch all items
-        console.log('fetched items:', items);
         res.json(items); // Return the items array
     } catch (err) {
         res.status(500).json({ message: err.message });
