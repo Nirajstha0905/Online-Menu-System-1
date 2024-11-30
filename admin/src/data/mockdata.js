@@ -432,165 +432,42 @@ export const mockPieData = [
 
 export const mockLineData = [
   {
-    id: "japan",
+    id: "Breakfast",
     color: tokens("dark").greenAccent[500],
     data: [
-      {
-        x: "plane",
-        y: 101,
-      },
-      {
-        x: "helicopter",
-        y: 75,
-      },
-      {
-        x: "boat",
-        y: 36,
-      },
-      {
-        x: "train",
-        y: 216,
-      },
-      {
-        x: "subway",
-        y: 35,
-      },
-      {
-        x: "bus",
-        y: 236,
-      },
-      {
-        x: "car",
-        y: 88,
-      },
-      {
-        x: "moto",
-        y: 232,
-      },
-      {
-        x: "bicycle",
-        y: 281,
-      },
-      {
-        x: "horse",
-        y: 1,
-      },
-      {
-        x: "skateboard",
-        y: 35,
-      },
-      {
-        x: "others",
-        y: 14,
-      },
+      { "x": "Monday", "y": 120 },
+      { "x": "Tuesday", "y": 150 },
+      { "x": "Wednesday", "y": 180 },
+      { "x": "Thursday", "y": 140 },
+      { "x": "Friday", "y": 200 },
+      { "x": "Saturday", "y": 250 },
+      { "x": "Sunday", "y": 300 }
     ],
   },
   {
-    id: "france",
+    id: "Lunch",
     color: tokens("dark").blueAccent[300],
     data: [
-      {
-        x: "plane",
-        y: 212,
-      },
-      {
-        x: "helicopter",
-        y: 190,
-      },
-      {
-        x: "boat",
-        y: 270,
-      },
-      {
-        x: "train",
-        y: 9,
-      },
-      {
-        x: "subway",
-        y: 75,
-      },
-      {
-        x: "bus",
-        y: 175,
-      },
-      {
-        x: "car",
-        y: 33,
-      },
-      {
-        x: "moto",
-        y: 189,
-      },
-      {
-        x: "bicycle",
-        y: 97,
-      },
-      {
-        x: "horse",
-        y: 87,
-      },
-      {
-        x: "skateboard",
-        y: 299,
-      },
-      {
-        x: "others",
-        y: 251,
-      },
+      { "x": "Monday", "y": 200 },
+      { "x": "Tuesday", "y": 220 },
+      { "x": "Wednesday", "y": 210 },
+      { "x": "Thursday", "y": 230 },
+      { "x": "Friday", "y": 240 },
+      { "x": "Saturday", "y": 300 },
+      { "x": "Sunday", "y": 320 }
     ],
   },
   {
-    id: "us",
+    id: "Dinner",
     color: tokens("dark").redAccent[200],
     data: [
-      {
-        x: "plane",
-        y: 191,
-      },
-      {
-        x: "helicopter",
-        y: 136,
-      },
-      {
-        x: "boat",
-        y: 91,
-      },
-      {
-        x: "train",
-        y: 190,
-      },
-      {
-        x: "subway",
-        y: 211,
-      },
-      {
-        x: "bus",
-        y: 152,
-      },
-      {
-        x: "car",
-        y: 189,
-      },
-      {
-        x: "moto",
-        y: 152,
-      },
-      {
-        x: "bicycle",
-        y: 8,
-      },
-      {
-        x: "horse",
-        y: 197,
-      },
-      {
-        x: "skateboard",
-        y: 107,
-      },
-      {
-        x: "others",
-        y: 170,
-      },
+      { "x": "Monday", "y": 180 },
+      { "x": "Tuesday", "y": 200 },
+      { "x": "Wednesday", "y": 190 },
+      { "x": "Thursday", "y": 210 },
+      { "x": "Friday", "y": 280 },
+      { "x": "Saturday", "y": 350 },
+      { "x": "Sunday", "y": 400 }
     ],
   },
 ];
