@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
   gap: 20px;
   background: url("https://img.freepik.com/premium-photo/blurred-restaurant-background-generative-ai_888418-10536.jpg");
@@ -22,16 +22,17 @@
 .user-btn{
   position: absolute;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1em;
 }
 .welcome-button{
-  padding: 10px 50px;
+  height: 100px;
+  width: 100px;
   font-weight: bold;
   border: none;
-  border-radius: 10px;
+  border-radius: 50%;
   background-color: var(--theme-color);
   color: var(--color);
   transition: transform 0.3s ease-in-out;
@@ -40,4 +41,10 @@
 .welcome-button:hover{
   transform: scale(1.1);
 
+}
+.welcome-logo{
+  
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }

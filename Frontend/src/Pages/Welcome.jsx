@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Styles/Welcome.css";
 import { CartContext } from "../App.jsx";
 import { GoogleLogin } from "@react-oauth/google";
+import logo from "./assets/logo.png";
 
 function Welcome() {
   const { setCoupen, tableNumber } = useContext(CartContext);
@@ -37,6 +38,9 @@ function Welcome() {
   });
   return (
     <div className="welcome-page">
+      <div className="welcome-logo">
+        <img src={logo} alt="logo" />{" "}
+      </div>
       <div className="window-overlay"></div>
       <div className="user-btn">
         <div>
