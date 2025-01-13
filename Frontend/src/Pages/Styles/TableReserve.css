@@ -1,8 +1,11 @@
+h1{
+  font-size: 40px;
+}
 .table-collection {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.3rem;
-  padding: 15px;
+  gap: 16px;
+  padding: 16px;
   justify-content: center;
 }
 .booking-table {
@@ -14,7 +17,7 @@
   align-items: center;
   box-shadow: -2px -2px 3px gray, 2px 2px 3px gray;
   padding: 20px 5px;
-  border-radius: 10px;
+  border-radius: 4px;
   max-width: 10.5em;
   min-width: 10em;
   max-height: 13em;
@@ -30,12 +33,11 @@
   height: 110px;
 }
 .table-warning{
-  border: 1px solid lightgray;
-  box-sizing: border-box;
+  box-sizing:content-box;
   box-shadow: 1px 1px 3px gray, -1px -1px 3px lightgray;
-  background-color: #dfdede;
+  background-color: #fdf0d5;
   color: red;
-  padding: 10px;
+  padding: 8px;
   font-size: 17px;
   margin: 10px;
 }
