@@ -3,6 +3,7 @@ import Table from "../Components/assets/OrderTable.png";
 import "./Styles/TableReserve.css";
 import { CartContext } from "../App";
 import { useNavigate } from "react-router-dom";
+import "../App.css";
 
 function TableReserve({ noOfTables }) {
   const { tableNumber, setTableNumber } = useContext(CartContext);
@@ -21,7 +22,8 @@ function TableReserve({ noOfTables }) {
   return (
     <>
       <center>
-        <h1>Reserve Your Table:</h1>
+        <h1>welcome {localStorage.getItem("userName")}</h1>
+        <h1 className="my-heading">Reserve Your Table:</h1>
 
         <div className="table-warning">
           Alert! Please check your Table no. carefully before selecting table.

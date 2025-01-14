@@ -25,16 +25,35 @@ const itemSchema = new mongoose.Schema({
     image_url: String,
     promotion: Boolean,
 }, { collection: "menuItem" });
+const specialMenuSchema = new mongoose.Schema({
+    _id: String,
+    name: String,
+    price: Number,
+    discountedPrice: Number,
+    stat: [String],
+    photo: String,
+    availability: Boolean,
+    details: String,
+}, { collection: "specialMenu" });
 
 // Create a model from the schema
 const Item = mongoose.model('menuItem', itemSchema);
+const specialMenuItem = mongoose.model('specialMenu', specialMenuSchema);
 
 // Endpoint to get all items
 app.get('/api/menu', async (req, res) => {
     try {
         const items = await Item.find(); // Fetch all items
         res.json(items); // Return the items array
-        console.log('Fetched items:', items);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+app.get('/api/Home', async (req, res) => {
+    try {
+        const specialItems = await specialMenuItem.find(); // Fetch all specialItems                   
+        res.json(specialItems); // Return the specialItems array
     } catch (err) {
         res.status(500).json({ message: err.message });
     }

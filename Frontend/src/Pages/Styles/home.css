@@ -7,7 +7,8 @@
   margin: 5px;
 }
 .home-offer {
-  font-weight: bold;
+  padding: 16px;
+  font-weight: medium;
   margin-top: 10px;
 }
 .menu-items {
@@ -48,17 +49,19 @@
   box-shadow: 1px 1px 3px gray;
   transform: scale(0.99);
 }
-.actual-price,
+.actual-price{
+  font-weight:550;
+}
 .item-name {
   font-weight: bold;
 }
 .slogan {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 32px;
+  font-weight: medium;
 }
 .add-to-cart {
-  padding: 0.4rem 0.8rem;
-  background-color: #ff914d;
+  padding: 8px,16px;
+  background-color: rgb(239, 115, 13);
   color: #fff;
   border: none;
   border-radius: 4px;

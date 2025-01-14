@@ -6,7 +6,7 @@ import {
   Route,
   useLocation,
   useNavigate,
-  Navigate
+  Navigate,
 } from "react-router-dom";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import Home from "./Pages/Home.jsx";
@@ -45,9 +45,7 @@ function Layout() {
   const [isAuthenticated, setIsAuthenticated] = useState(
     JSON.parse(localStorage.getItem("isAuthenticated")) || false
   );
-  const [coupen, setCoupen] = useState(
-    localStorage.getItem("user") || false
-  );
+  const [coupen, setCoupen] = useState(localStorage.getItem("user") || false);
 
   const [itemQuantity, setItemQuantity] = useState(1);
   const [popupVisiblilty, setPopupVisiblilty] = useState(false);
@@ -72,8 +70,7 @@ function Layout() {
   }, [count, cartItems]);
 
   useEffect(() => {
-    localStorage.setItem("isAuthenticated",
-       JSON.stringify(isAuthenticated));
+    localStorage.setItem("isAuthenticated", JSON.stringify(isAuthenticated));
   }, [isAuthenticated]);
 
   const audio = new Audio("../drop.m4a");

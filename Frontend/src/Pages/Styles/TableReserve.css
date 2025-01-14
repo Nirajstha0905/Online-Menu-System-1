@@ -1,5 +1,7 @@
-h1{
-  font-size: 40px;
+.my-heading{
+  font-family: "Poppins", serif;
+  font-weight:300;
+  font-style:normal;
 }
 .table-collection {
   display: flex;

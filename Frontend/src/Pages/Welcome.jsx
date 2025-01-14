@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Styles/Welcome.css";
 import { CartContext } from "../App.jsx";
@@ -18,7 +18,7 @@ function Welcome() {
   }
 
   const handleLoginSuccess = (response) => {
-    console.log("login successful: ", response);
+    console.log(response);
     setCoupen(true);
     handleEntry();
   };
