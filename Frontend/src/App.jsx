@@ -21,6 +21,13 @@ import Table from "./Components/Table/Table.jsx";
 import EmployeePage from "./Pages/EmployeePage.jsx";
 import ProtectedRoute from "./JavaScript/ProtectedRoute.jsx";
 import TableReserve from "./Pages/TableReserve.jsx";
+import AboutUs from "./Pages/FooterOption/AboutUs.jsx";
+import Advertisement from "./Pages/FooterOption/Advertisement.jsx";
+import Marketing from "./Pages/FooterOption/Marketing.jsx";
+import TermsOfUse from "./Pages/FooterOption/TermsOfUse.jsx";
+import ErrorPage from "./Pages/ErrorPage.jsx";
+// import CookiePolicy from "./Pages/FooterOption/CookiePolicy.jsx";
+// import PrivacyPolicy from "./Pages/FooterOption/PrivacyPolicy.jsx";
 
 export const CartContext = createContext();
 export const ItemContext = createContext();
@@ -133,12 +140,34 @@ function Layout() {
   };
 
   const hideNavbarFooter = ["/", "/login", "/reserve-seat"];
-  const hideCart = ["/", "/login", "/table", "/employee", "/reserve-seat"];
+  const hideCart = [
+    "/",
+    "/login",
+    "/table",
+    "/employee",
+    "/reserve-seat",
+    "/about-us",
+    "/advertisement",
+    "/marketing",
+    "/terms-of-use",
+    "/cookie-policy",
+    "/privacy-policy",
+  ];
 
-  const noIndex = ["/table", "/employee", `/search/+${searchItem}`];
+  const noIndex = [
+    "/table",
+    "/employee",
+    `/search/+${searchItem}`,
+    "/about-us",
+    "/advertisement",
+    "/marketing",
+    "/terms-of-use",
+    "/cookie-policy",
+    "/privacy-policy",
+  ];
 
   useEffect(() => {
-    if (location.pathname == "/") {
+    if (location.pathname === "/") {
       setSelectedIndex("Home");
     } else if (noIndex.includes(location.pathname)) {
       setSelectedIndex(null);
@@ -225,7 +254,18 @@ function Layout() {
                   </ProtectedRoute>
                 }
               ></Route>
-              <Route path="*" element={<Navigate to="/Home" replace />} />
+
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/advertisement" element={<Advertisement />} />
+              <Route path="/marketing" element={<Marketing />} />
+              <Route path="/terms-of-use" element={<TermsOfUse />} />
+              {/* <Route path="/cookie-policy" element={<CookiePolicy />} /> */}
+              {/* <Routes path="/privacy-policy" element={<PrivacyPolicy />} /> */}
+
+              <Route
+                path="*"
+                element={<ErrorPage setSelectedIndex={setSelectedIndex} />}
+              />
             </Routes>
             {!hideNavbarFooter.includes(location.pathname) && <Footer />}
             {!hideCart.includes(location.pathname) && (

@@ -6,7 +6,21 @@ const http = require('http');
 const app = express();
 const PORT = 5000;
 
-app.use(cors({ origin: 'http://localhost:5173' })); // Allow requests from React app
+// CORS options to allow multiple origins
+const corsOptions = {
+  origin: (origin, callback) => {
+    const allowedOrigins = ['http://localhost:5173', 'http://localhost:5174'];
+    if (allowedOrigins.includes(origin) || !origin) {
+      // Allow requests with no origin (e.g., Postman, mobile apps)
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
+
+// Use the CORS options
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // MongoDB connection
